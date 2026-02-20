@@ -1,0 +1,11 @@
+CREATE SCHEMA sucos_vendas;
+
+SELECT * FROM tabela_de_clientes;
+
+SELECT CPF, NOME FROM tabela_de_clientes;
+
+WHERE CODIGO_DO_PRODUTO = '1000889';
+SELECT * FROM tabela_de_produtos 
+WHERE CODIGO_DO_PRODUTO = '1000889';
+SELECT * FROM tabela_de_produtos
+WHERE sabor = 'uva'

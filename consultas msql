@@ -1,0 +1,33 @@
+# Problema
+
+Select nome, de_ferias, bairro from tabela_de_vendedores 
+where nome = 'CLAUDIA MORAIS' and bairro = 'JARDINS';
+
+Select * from tabela_de_vendedores
+where PERCENTUAL_COMISSAO > 0.10 and DE_FERIAS = 1;
+
+Select * from notas_fiscais where matricula = '00237' 
+
+or DATA_VENDA =12-01-2015;
+
+Select codigo_do_produto, quantidade from itens_notas_fiscais 
+
+where quantidade >= 99;
+
+
+SELECT 
+    c.NOME AS CLIENTE, 
+    v.NOME AS VENDEDOR, 
+    p.NOME_DO_PRODUTO AS PRODUTO, 
+    p.SABOR 
+FROM itens_notas_fiscais i 
+JOIN notas_fiscais n ON n.NUMERO = i.NUMERO 
+JOIN tabela_de_clientes c ON c.CPF = n.CPF 
+JOIN tabela_de_vendedores v ON v.MATRICULA = n.MATRICULA 
+JOIN tabela_de_produtos p ON p.CODIGO_DO_PRODUTO = i.CODIGO_DO_PRODUTO 
+WHERE i.NUMERO = 102 
+  AND i.CODIGO_DO_PRODUTO = '1101035' 
+  AND i.QUANTIDADE = 84;
+  
+  
+  
